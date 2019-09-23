@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <title>Car Buddy by Info Tech Development Systems</title>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheet.css">  
+</head>
+
+<body>
+    
+    <div id="navBar">
+        <ul>
+            <img src="Logo.png" alt="car_buddy_logo" width="140px" height="80px">
+            <li><a class="active" href="#home"><strong>Home</strong></a></li>
+
+            <li><a href="#booking"><strong>Booking</strong></a></li>
+            <li><a href="#findcars"><strong>Find Cars</strong></a></li>
+            <li><a href="#about"><strong>About Us</strong></a></li>
+            <button><strong>Sign Up</strong></button>
+            <button><strong>Login</strong></button>
+        </ul>
+        
+    </div>
+
+    <div id="navBarMobile">
+            <div class="row">
+                    <div class="column">
+                      <img src="Menu-Icon.png" alt="menu_icon" style="height:70px">
+                    </div>
+                    <div class="column">
+                      <img id="logoMobile" src="Logo.png" alt="car_buddy_logo" style="height: 70px;">
+                    </div>
+                    <div class="column">
+                      <img id="loginMobile" src="Login-Mobile-Icon.png" alt="login-mobile" style="height: 70px;">
+                    </div>
+                  </div>
+            
+        </div>
+
+
+    
+    <div class="website-phrase">
+        <h2>View our most popular cars below</h2>
+    </div>
+    
+    <div class="website-banner">
+            <img class="mySlides" src="Toyota_HiAce.jpg.jpg">
+            <img class="mySlides" src="Ford_Ranger.jpg">
+            <img class="mySlides" src="Mazda_CX-5.jpg">
+            <img class="mySlides" src="Hyundai_i30.jpg">
+            <img class="mySlides" src="Toyota_Corolla.jpg">
+
+            <button class="banner-button banner-button-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="banner-button banner-button-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <div id="website-footer">
+        <h1>Car Buddy</h1>
+        <p>Car Buddy is a web based program that allows customers to hire vehicles of their choice which are freely parked around the city.</p>
+        <p>Once booked, customers will have the ability to use that vehicle within the booked period and return the vehicle to a selected Car Buddy parking location.</p>
+    </div>
+
+
+
+
+    <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+
+
+
+</body>
+</html>

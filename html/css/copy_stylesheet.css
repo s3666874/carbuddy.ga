@@ -1,0 +1,607 @@
+body {
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+p {
+    line-height: 1em;
+}
+
+#website-footer {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #fff;
+}
+
+/* The following media set changes the look of the Car Buddy website when the maximum screen width is 900 pixels*/
+@media only screen and (max-width: 600px) {
+
+    #navBar {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    body {
+        max-width: 600px;
+    }
+
+    #navBarMobile {
+        height: 70px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 0px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+
+    }
+    img {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #Menu-Icon {
+        padding-top: 5px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #logoMobile {
+        display: block;
+        margin: auto;
+    }
+
+    #loginMobile {
+        float: right;
+        position: relative;
+        display: block;
+    }
+
+    ul button {
+        background-color: rgb(56,106,220);
+        color: white;
+        font-size: 1em;
+        padding: 5px;
+        margin-right: 5px;
+        visibility: hidden;
+    }
+
+    li {
+        display: inline;
+    }
+
+    li a {
+        display:inline-block;
+        color: rgb(56,106,220);
+        text-align: center;
+        vertical-align: middle;
+        padding: 0px;
+        margin-right: 5px;
+        text-decoration: none;
+        font-size: 1em;
+        line-height: 10px;
+        visibility: hidden;
+    }
+
+    li a:hover {
+        background-color: rgb(56,106,220);
+        color: white;
+    }
+
+    .website-phrase {
+        height: 50px;
+        position: relative;
+        background-color: darkblue;
+    }
+
+    .website-banner {
+        height: 375px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .mySlides {
+        display:none;
+        margin: 0 auto;
+        height: 300px;
+        width: 400px;
+        padding: 0px;
+        object-fit: contain;
+    }
+
+
+}
+
+/* The following media set changes the look of the Car Buddy website when the maximum screen width is 900 pixels*/
+@media only screen and (max-width: 900px) {
+
+    #navBar {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    body {
+        max-width: 600px;
+    }
+
+    #navBarMobile {
+        height: 70px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 0px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+    }
+    img {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #Menu-Icon {
+        padding-top: 5px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #logoMobile {
+        display: block;
+        margin: auto;
+    }
+
+    #loginMobile {
+        float: right;
+        position: relative;
+        display: block;
+    }
+
+    ul button {
+        background-color: rgb(56,106,220);
+        color: white;
+        font-size: 1em;
+        padding: 5px;
+        margin-right: 5px;
+        visibility: hidden;
+    }
+
+    li {
+        display: inline;
+    }
+
+    li a {
+        display:inline-block;
+        color: rgb(56,106,220);
+        text-align: center;
+        vertical-align: middle;
+        padding: 0px;
+        margin-right: 5px;
+        text-decoration: none;
+        font-size: 1em;
+        line-height: 10px;
+        visibility: hidden;
+    }
+
+    li a:hover {
+        background-color: rgb(56,106,220);
+        color: white;
+    }
+
+    .website-phrase {
+        height: 50px;
+        position: relative;
+        background-color: darkblue;
+    }
+
+    .website-banner {
+        height: 375px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .mySlides {
+        display:none;
+        margin: 0 auto;
+        height: 375px;
+        max-width: 600px;
+        padding: 0px;
+    }
+   .centerdform {
+	   
+	max-width: 90%;
+        margin: auto;
+
+      }
+    .centerdcontent{
+      display: inline-block;
+    }
+    form {
+        color:grey;
+    }
+    form h1 {
+        color: darkblue;
+    }
+    form h2 {
+        color: white;
+        background-color: darkblue;
+        margin: 20px 0px 0px 0px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    form input[type=text] {
+        margin: 10px, 10px, 10px, 10px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    form input[type=password] {
+        margin: 10px, 10px, 10px, 10px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    form input[type=submit] {
+        width: 20em;
+        background-color: darkblue;
+        color: white;
+        padding: 14px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    label {
+        color: darkblue;
+        display: block;
+        margin: 0px,0px,0px,0px;
+        padding: 10px 0px 5px 0px;
+        text-align: left;
+        text-align: left;
+    }
+
+
+}
+
+/* The following media set changes the look of the Car Buddy website when the minimum screen width is 901 pixels*/
+@media only screen and (min-width: 901px) {
+    #navBarMobile {
+        visibility: hidden;
+        height: 0px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+    }
+    ul img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 50px;
+    }
+
+    ul button {
+        background-color: rgb(56,106,220);
+        color: white;
+        font-size: 1.4em;
+        padding: 5px 5px;
+        margin-right: 10px;
+    }
+
+    li {
+        display: inline;
+    }
+
+    li a {
+        display:inline-block;
+        color: rgb(56,106,220);
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px;
+        margin-right: 10px;
+        text-decoration: none;
+                                                                          font-size: 1.4em;
+
+    }
+
+    li a:hover {
+        background-color: rgb(56,106,220);
+        color: white;
+    }
+        .centerdform {
+        max-width: 40%;
+        margin: auto;
+
+      }
+    .centerdcontent{
+      display: inline-block;
+    }
+    form {
+        color:grey;
+    }
+    form h1 {
+        color: darkblue;
+    }
+    form h2 {
+        color: white;
+        background-color: darkblue;
+        margin: 20px 0px 0px 0px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    form input[type=text] {
+        margin: 10px, 10px, 10px, 10px;
+        padding-left: 10px;
+        text-align: left;        
+    }
+    form input[type=password] {
+        margin: 10px, 10px, 10px, 10px;
+        padding-left: 10px;
+        text-align: left;
+    }
+    form input[type=submit] {
+        width: 20em;
+        background-color: darkblue;
+        color: white;
+        padding: 14px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    label { 
+        color: darkblue;
+        display: block; 
+        margin: 0px,0px,0px,0px;
+        padding: 10px 0px 5px 0px;
+        text-align: left;
+        text-align: left;
+    }
+
+    .website-phrase {
+        height: 50px;
+        position: relative;
+        background-color: darkblue;
+    }
+
+    .website-phrase h2 {
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .website-banner {
+        background-image: rgba(255, 255, 255);
+        height: 700px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: block;
+    }
+
+    .mySlides {
+        display:none;
+        margin: auto;
+        height: 570px;
+        width: 800px;
+    }
+
+    img {
+        object-fit: contain;
+    }
+
+}
+
+/* The following media set changes the look of the Car Buddy website when the minimum screen width is 1295 pixels*/
+@media only screen and (min-width: 1295px) {
+    #navBarMobile {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+    }
+    ul img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 100px;
+    }
+
+    ul button {
+        background-color: rgb(56,106,220);
+        color: white;
+        font-size: 1.4em;
+        padding: 5px 5px;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    
+    ul button:hover {
+        background-color: #ccc;
+        color: rgb(56,106,220);
+
+    }
+
+    li {
+        display: inline;
+    }
+
+    li a {
+        display:inline-block;
+        color: rgb(56,106,220);
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px;
+        margin-right: 90px;
+        text-decoration: none;
+        font-size: 1.4em;
+
+    }
+
+    li a:hover {
+        background-color: rgb(56,106,220);
+        color: white;
+    }
+
+    .website-phrase {
+        height: 50px;
+        position: relative;
+        background-color: darkblue;
+    }
+
+    .website-banner {
+        background-image: rgba(255, 255, 255);
+        height: 700px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .mySlides {
+        display:none;
+        margin: auto;
+        height: 700px;
+        width: 1100px;
+    }
+
+}
+
+.banner-button {
+    color: black;
+    font-size: 3em;
+    border:none;
+    display:inline-block;
+    padding:24px 24px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.banner-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.banner-button-display-left {
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%)
+}
+
+.banner-button-display-right {
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
+}
+
+
+#website-footer h1 {
+    color: darkblue;
+}
+
+.website-phrase h2 {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
