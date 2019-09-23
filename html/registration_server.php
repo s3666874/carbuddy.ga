@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = mysqli_real_escape_string($db, preg_replace('/\s+/', '', $_POST['email']));
     $password1 = mysqli_real_escape_string($db, $_POST['password1']);
     $password2 = mysqli_real_escape_string($db, $_POST['password2']);
+    $hash = md5 (rand(0,1000)); // Generate a random 32 character hash
 
     // Form validation: all input fields are required
     if(empty($firstName)){
@@ -66,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //If no error, register users
     if(count($errors) == 0){
         $passwordHash = md5($password1);
-        $query = $db->query("INSERT INTO Users (FirstName, LastName, Email, Password) VALUES('$firstName', '$lastName', '$email', '$passwordHash')");
+        $query = $db->query("INSERT INTO Users (FirstName, LastName, Email, Password, hash) VALUES('$firstName', '$lastName', '$email', '$passwordHash', '$hash')");
 
         /*if($query){
         }else{
