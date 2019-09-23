@@ -1,17 +1,18 @@
-<?php
-  $servername = "127.0.0.1";
-  $username = "root";
-  $password = "password23";
-  $dbname = "car_buddy";
+<?php session_start(); ?>
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-?>
+<?php include_once('db_connect.php') ?>
 
 <!doctype html>
 <html>
 <head>
-  <title>Welcome to Car Buddy!</title>
+  <title>Car Buddy by Info Tech Development Systems</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
+<?php include_once('bigNav.php') ?>
+<?php include_once('mobileNav.php') ?>
