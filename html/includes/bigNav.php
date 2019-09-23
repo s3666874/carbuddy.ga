@@ -15,6 +15,6 @@
       		echo'<button onclick='.$button.'><strong>Sign Up</strong></button>';
       };
     ?>
-    <button onclick="window.location.href = '#"><strong>Login</strong></button>
+    <button onclick="window.location.href = 'login.php'"><strong>Login</strong></button>
   </ul>
 </div>
