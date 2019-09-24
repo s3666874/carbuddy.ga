@@ -15,6 +15,11 @@
       		echo'<button onclick='.$button.'><strong>Sign Up</strong></button>';
       };
     ?>
-    <button onclick="window.location.href = 'login.php'"><strong>Login</strong></button>
+
+    <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]) { ?>
+      <button onclick="window.location.href = 'logout.php'"><strong>Logout</strong></button>
+    <?php } else { ?>
+      <button onclick="window.location.href = 'login.php'"><strong>Login</strong></button>
+    <?php } ?>
   </ul>
 </div>

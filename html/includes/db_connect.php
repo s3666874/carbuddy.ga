@@ -1,5 +1,4 @@
 <?php
-
   if (!$db) {
     // connecting to the database
     $host = '127.0.0.1';
