@@ -4,7 +4,7 @@
   include_once('includes/db_connect.php');
 
   $email = $entered_password = "";
-  $email_err = $password_err = "";
+  $email_err = $error_message = $password_err = "";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -68,7 +68,7 @@
           }
 
         } else {
-          echo "Oops! Something went wrong. Please try again later.";
+          $error_message = "Oops! Something went wrong. Please try again later.";
         }
       }
 
@@ -91,7 +91,23 @@
     <h1 style="text-align: center">Login</H1>
 
     <p style="text-align: center">
-      Please login via the form below
+      Please login via the form below:
+    </p>
+
+    <p style="color: red;">
+      <?php
+        if (!empty($error_message)) {
+          echo $error_message;
+        }
+
+        if (!empty($email_err)) {
+          echo $email_err;
+        }
+
+        if (!empty($password_err)) {
+          echo $password_err;
+        }
+      ?>
     </p>
 
     <h2>Login Details </h2>
