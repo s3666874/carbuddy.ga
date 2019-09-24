@@ -113,10 +113,10 @@
     <h2>Login Details </h2>
 
     <label><strong>Email</strong></label>
-    <input type="text" name="email" placeholder="Please enter your email" value="<? echo $email; ?>" size="100">
+    <input type="text" name="email" placeholder="Please enter your email" value="<?php echo $email; ?>" size="100">
 
     <label><strong>Password</strong></label>
-    <input type="password" name="password" placeholder="Please enter your password" value="<? echo $entered_password; ?>" size="100">
+    <input type="password" name="password" placeholder="Please enter your password" value="<?php echo $entered_password; ?>" size="100">
 
     <div style="text-align: center"><input type="submit" value="LOGIN" ></div>
   </form>
