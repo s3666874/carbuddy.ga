@@ -75,7 +75,7 @@
           $hash = md5 (rand(0,1000)); // Generate a random 32 character hash
           $passwordHash = md5($password1); // Hash the password
 
-          $query = $db->query("INSERT INTO Users (FirstName, LastName, Email, Password, hash) VALUES('$firstName', '$lastName', '$email', '$passwordHash', '$hash')");
+          $query = $db->query("INSERT INTO Users (FirstName, LastName, Email, Password, Hash, UserTypeID) VALUES('$firstName', '$lastName', '$email', '$passwordHash', '$hash', 2)");
 
           /*if($query){
           }else{
