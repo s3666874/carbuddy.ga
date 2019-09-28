@@ -15,23 +15,10 @@
     <div>
         <!-- start PHP code -->
         <?php
+          include_once('includes/db_connect.php');
 
             
-            // connecting to the database
-            $db = mysqli_connect('localhost', 'admin', 'jasf823EL', 'useraccounts');
 
-            /* check connection */
-            if (mysqli_connect_errno()) {
-                printf("Connect failed: %s\n", mysqli_connect_error());
-                exit();
-            }
-
-            /* check if server is alive */
-            if (mysqli_ping($db)) {
-                printf("DB connection is okay");
-            } else {
-                printf ("Error: %s\n", mysqli_error($db));
-            }
             
             /* Verify email and hash received*/
             if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
