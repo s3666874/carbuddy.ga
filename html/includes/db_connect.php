@@ -1,5 +1,5 @@
 <?php
-  if (!$db) {
+  if (!isset($db)) {
     // connecting to the database
     $host = '127.0.0.1';
     $user = "root";
