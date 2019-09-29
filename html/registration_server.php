@@ -64,7 +64,7 @@
       }
 
       //Checking whehter the email address has been registered
-      $email_check_query = "SELECT email FROM Users WHERE email = '$email' LIMIT 1";
+      $email_check_query = "SELECT Email FROM Users WHERE Email = '$email' LIMIT 1";
 
       $result = mysqli_query($db, $email_check_query);
       $email_exists_check = mysqli_fetch_assoc($result);
