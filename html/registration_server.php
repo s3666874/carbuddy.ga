@@ -62,7 +62,7 @@
       }
 
       //Checking whehter the email address has been registered
-      $email_check_query = "SELECT email FROM Users WHERE email = '$email' LIMIT 1";
+      $email_check_query = "SELECT Email FROM Users WHERE Email = '$email' LIMIT 1";
 
       $result = mysqli_query($db, $email_check_query);
       $email_exists_check = mysqli_fetch_assoc($result);
@@ -81,20 +81,20 @@
           if($query){
             $subject = "Welcome to Car Buddy! Confirm your email";
             $emailMessage = '
- 
+
             Hi '.$firstName.',
-                
+
             Please click on the below link to activate your Car Buddy account:
             http://www.carbuddy.ga/verify.php?email='.$email.'&hash='.$hash.'
 
             Kind Regards,
             Car Buddy Team
-            '; 
+            ';
             sendEmail($subject, $emailMessage, $email);
             header("Location: ./reg_success_landing.php");
           }
-          
-          
+
+
           /*if($query){
           }else{
               echo 'Database query error';

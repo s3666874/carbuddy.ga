@@ -25,7 +25,7 @@
     // Validate credentials
     if (empty($email_err) && empty($password_err)) {
       // Prepare a select statement
-      $sql = "SELECT UserID, Email, Password, FirstName, LastName FROM Users WHERE UserTypeID = 2 AND Email = ?";
+      $sql = "SELECT UserID, Email, Password, FirstName, LastName FROM Users WHERE UserTypeID = 2 AND Active = 1 AND Email = ?";
 
       if ($stmt = mysqli_prepare($db, $sql)) {
 
