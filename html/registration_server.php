@@ -14,8 +14,10 @@
       // retrieving input values from the form
       // all name are stored in lower case
       // all spaces (including tabs and line ends) are removed from names and email.
-      $firstName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['firstName'])));
-      $lastName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['lastName'])));
+      //$firstName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['firstName'])));
+      //$lastName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['lastName'])));
+      $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
+      $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
       $email = mysqli_real_escape_string($db, preg_replace('/\s+/', '', $_POST['email']));
       $password1 = mysqli_real_escape_string($db, $_POST['password1']);
       $password2 = mysqli_real_escape_string($db, $_POST['password2']);
@@ -81,20 +83,20 @@
           if($query){
             $subject = "Welcome to Car Buddy! Confirm your email";
             $emailMessage = '
- 
+
             Hi '.$firstName.',
-                
+
             Please click on the below link to activate your Car Buddy account:
             http://www.carbuddy.ga/verify.php?email='.$email.'&hash='.$hash.'
 
             Kind Regards,
             Car Buddy Team
-            '; 
+            ';
             sendEmail($subject, $emailMessage, $email);
             header("Location: ./reg_success_landing.php");
           }
-          
-          
+
+
           /*if($query){
           }else{
               echo 'Database query error';
