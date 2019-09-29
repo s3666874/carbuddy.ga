@@ -14,8 +14,10 @@
       // retrieving input values from the form
       // all name are stored in lower case
       // all spaces (including tabs and line ends) are removed from names and email.
-      $firstName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['firstName'])));
-      $lastName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['lastName'])));
+      //$firstName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['firstName'])));
+      //$lastName = mysqli_real_escape_string($db, strtolower(preg_replace('/\s+/', '', $_POST['lastName'])));
+      $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
+      $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
       $email = mysqli_real_escape_string($db, preg_replace('/\s+/', '', $_POST['email']));
       $password1 = mysqli_real_escape_string($db, $_POST['password1']);
       $password2 = mysqli_real_escape_string($db, $_POST['password2']);

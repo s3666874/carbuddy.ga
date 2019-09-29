@@ -46,16 +46,46 @@ html,body,h1 {
 }
 
 #admin_side_menu li {
+  list-style: none;
+}
+
+#admin_side_menu li#btn_logout {
+  margin-top: 30px;
+}
+
+#admin_side_menu a:link, #admin_side_menu a:hover, #admin_side_menu a:visited, #admin_side_menu a:active {
   display: block;
   width: 175px;
   height: 25px;
   text-align: center;
   padding-top: 5px;
   border: 1px solid black;
+  text-decoration: none;
   margin-bottom: 5px;
   cursor: pointer;
+  color: black;
 }
 
-#admin_side_menu li:hover {
+#admin_side_menu a:hover, #admin_side_menu a:active, #admin_side_menu a:visited {
   background-color: cyan;
+  text-decoration: none;
+}
+
+.list_table {
+  margin: 20px 0px 0px 20px;
+}
+
+.list_table th, .list_table td {
+  padding: 5px 40px;
+  border: 1px solid black;
+}
+
+.responseMessage {
+  width: 230px;
+  height: 20px;
+  color: #fff;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: green;
+  text-align: center;
 }

@@ -42,20 +42,27 @@
           if (mysqli_stmt_num_rows($stmt) == 1) {
 
             // Bind result variables
-            mysqli_stmt_bind_result($stmt, $userid, $email, $password, $firstname, $lastname);
+            mysqli_stmt_bind_result($stmt, $userid, $email, $password, $firstname, $lastname, $usertypeid);
 
             if (mysqli_stmt_fetch($stmt)) {
               if ($password == md5($entered_password)) {
 
                 // Store data in session variables
-                $_SESSION["loggedin"] = true;
                 $_SESSION["userid"] = $userid;
                 $_SESSION["email"] = $email;
                 $_SESSION["firstname"] = $firstname;
                 $_SESSION["lastname"] = $lastname;
 
-                // Redirect user to welcome page
-                header("location: index.php");
+                if ($usertypeid == 1) {
+                  $_SESSION["admin_loggedin"] = true;
+
+                  header("location: admin/index.php");
+                } else {
+                  $_SESSION["loggedin"] = true;
+
+                  // Redirect user to welcome page
+                  header("location: index.php");
+                }
 
               } else {
                 // Display an error message if password is not valid
